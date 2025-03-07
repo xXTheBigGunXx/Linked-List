@@ -12,6 +12,18 @@ template<typename T>
 LinkedList<T>::Node::~Node() {}
 
 template<typename T>
+bool LinkedList<T>::Node::operator<(const Node* right) const
+{
+    return this->value < right->value;
+}
+
+template<typename T>
+bool LinkedList<T>::Node::operator>(const Node* right) const
+{
+    return this->value > right->value;
+}
+
+template<typename T>
 LinkedList<T>::LinkedList(): head{nullptr}, curr{nullptr}, tail{nullptr} { count = 0;};
 
 template<typename T>

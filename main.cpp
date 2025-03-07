@@ -4,13 +4,15 @@ int main()
 {
     xx::LinkedList<int> llist;
 
-    llist.AddToBack(1);
-    llist.AddToBack(2);
-    llist.AddToBack(3);
-    llist.AddToBack(4);
-    llist.AddToBack(5);
+    llist.AddToFront(1);
+    llist.AddToFront(2);
+    llist.AddToFront(3);
+    llist.AddToFront(4);
+    llist.AddToFront(5);
 
-    llist.Insert(1, -1);
+    llist.SelectionSort();
+
+    llist.SwapNodes(0,1);
 
     llist.LoopList([](int&Node ) -> void {std::cout<<Node<<std::endl;});
 }
